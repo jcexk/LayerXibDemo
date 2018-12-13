@@ -14,6 +14,8 @@
 		CC3A1A1321C218BA00DD4627 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC3A1A1121C218BA00DD4627 /* LaunchScreen.storyboard */; };
 		CC3A1A1E21C218BA00DD4627 /* LayerXibDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1A1D21C218BA00DD4627 /* LayerXibDemoTests.swift */; };
 		CC3A1A2921C218BA00DD4627 /* LayerXibDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1A2821C218BA00DD4627 /* LayerXibDemoUITests.swift */; };
+		CC3A1A3721C218D400DD4627 /* ExtendClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1A3621C218D400DD4627 /* ExtendClass.swift */; };
+		CC3A1A3B21C218FC00DD4627 /* UIView+BorderCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1A3A21C218FC00DD4627 /* UIView+BorderCircle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		CC3A1A2421C218BA00DD4627 /* LayerXibDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayerXibDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC3A1A2821C218BA00DD4627 /* LayerXibDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayerXibDemoUITests.swift; sourceTree = "<group>"; };
 		CC3A1A2A21C218BA00DD4627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC3A1A3621C218D400DD4627 /* ExtendClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendClass.swift; sourceTree = "<group>"; };
+		CC3A1A3821C218FB00DD4627 /* LayerXibDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LayerXibDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC3A1A3921C218FC00DD4627 /* UIView+BorderCircle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderCircle.h"; sourceTree = "<group>"; };
+		CC3A1A3A21C218FC00DD4627 /* UIView+BorderCircle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderCircle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,14 @@
 			children = (
 				CC3A1A0821C218B700DD4627 /* AppDelegate.swift */,
 				CC3A1A0A21C218B700DD4627 /* ViewController.swift */,
+				CC3A1A3621C218D400DD4627 /* ExtendClass.swift */,
+				CC3A1A3921C218FC00DD4627 /* UIView+BorderCircle.h */,
+				CC3A1A3A21C218FC00DD4627 /* UIView+BorderCircle.m */,
 				CC3A1A0C21C218B700DD4627 /* Main.storyboard */,
 				CC3A1A0F21C218BA00DD4627 /* Assets.xcassets */,
 				CC3A1A1121C218BA00DD4627 /* LaunchScreen.storyboard */,
 				CC3A1A1421C218BA00DD4627 /* Info.plist */,
+				CC3A1A3821C218FB00DD4627 /* LayerXibDemo-Bridging-Header.h */,
 			);
 			path = LayerXibDemo;
 			sourceTree = "<group>";
@@ -193,6 +203,7 @@
 				TargetAttributes = {
 					CC3A1A0421C218B700DD4627 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					CC3A1A1821C218BA00DD4627 = {
 						CreatedOnToolsVersion = 10.0;
@@ -256,7 +267,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3A1A3B21C218FC00DD4627 /* UIView+BorderCircle.m in Sources */,
 				CC3A1A0B21C218B700DD4627 /* ViewController.swift in Sources */,
+				CC3A1A3721C218D400DD4627 /* ExtendClass.swift in Sources */,
 				CC3A1A0921C218B700DD4627 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZHN7HCQ5G;
 				INFOPLIST_FILE = LayerXibDemo/Info.plist;
@@ -441,6 +455,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.LayerXibDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LayerXibDemo/LayerXibDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZZHN7HCQ5G;
 				INFOPLIST_FILE = LayerXibDemo/Info.plist;
@@ -459,6 +476,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.LayerXibDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LayerXibDemo/LayerXibDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

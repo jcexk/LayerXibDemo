@@ -2,7 +2,7 @@
 //  LayerXibDemoUITests.swift
 //  LayerXibDemoUITests
 //
-//  Created by 江其 on 2018/12/13.
+//  Created by  on 2018/12/13.
 //  Copyright © 2018 J. All rights reserved.
 //
 
